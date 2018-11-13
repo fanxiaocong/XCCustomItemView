@@ -171,10 +171,9 @@
         XCCustomItem *item = self.subviews[i];
         XCCustomItemModel *itemM = self.itemMs[i];
         
-        if (!itemM.url)     continue;
+        if (itemM.image)    continue;
         
-        if (webImgconfig)
-        {
+        if (webImgconfig) {
             webImgconfig(item, [NSURL URLWithString:itemM.url]);
         }
     }
