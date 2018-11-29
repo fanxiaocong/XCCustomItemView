@@ -89,8 +89,6 @@
         
         [item setTitle:itemM.title forState:UIControlStateNormal];
         [item setBackgroundColor:self.configure.backgroundColor];
-        item.imageView.contentMode = UIViewContentModeScaleAspectFill;
-        item.clipsToBounds = YES;
         item.titleLabel.textAlignment = NSTextAlignmentCenter;
         [item addTarget:self action:@selector(didClickItemAction:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -118,7 +116,8 @@
     item.backgroundColor = self.configure.backgroundColor;
     
     item.imageView.layer.cornerRadius  = self.configure.imageCornerRadius;
-    item.imageView.layer.masksToBounds = YES;
+    item.imageView.layer.masksToBounds = self.configure.clipsToBounds;
+    item.imageView.contentMode = self.configure.contentMode;
     
     [item setNeedsLayout];
 }

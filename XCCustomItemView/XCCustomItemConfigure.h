@@ -20,6 +20,10 @@
 @property (assign, nonatomic) CGSize imageSize;
 ///圆角半径：默认 30
 @property (assign, nonatomic) CGFloat imageCornerRadius;
+/// 图片停靠模式：默认 UIViewContentModeScaleAspectFill
+@property (assign, nonatomic) UIViewContentMode contentMode;
+/// 是否裁剪：默认 YES
+@property (assign, nonatomic) BOOL clipsToBounds;
 /// 图片与文字之间的距离：默认 15
 @property (assign, nonatomic) CGFloat imageAndTitleMargin;
 

@@ -23,6 +23,8 @@
     configure.column = 3;
     configure.columnMargin = 0;
     configure.rowMargin = 0;
+    configure.contentMode = UIViewContentModeScaleAspectFill;
+    configure.clipsToBounds = YES;
     
     return configure;
 }
